@@ -42,7 +42,8 @@ We had to majorly revamp the entire process. Pretty much none of us knew how to 
 Here are a few issues that we ran into:
 <details>
 <summary>Getting funds for this project</summary>
-Robotics is incredibly expensive. The school being out of funds for 2 years also didn't help, so we applied to a grant to buy parts for both this project and for future club use :D
+
++ Robotics is incredibly expensive. The school being out of funds for 2 years also didn't help, so we applied to a grant to buy parts for both this project and for future club use :D
 </details>
 
 <details>
@@ -50,36 +51,47 @@ Robotics is incredibly expensive. The school being out of funds for 2 years also
 
 + <details>
     <summary>Not sparking</summary>
-    Make sure the wires are not crossed so the current doesn't jump
+
+    + Make sure the wires are not crossed so the current doesn't jump
   </details> 
 
 + <details>
     <summary>Residue on the conductors</summary>
-    Scrape it off with a knife/clean it with rubbing alcohol
+
+    + Scrape it off with a knife/clean it with rubbing alcohol
   </details>
 </details>
 
 <details>
 <summary>Figuring out how motors and servos work</summary>
-There's an ungodly amount of trial and error involved here, but the main takeaway was to simply test code to see if it worked. 
-<br></br>
-Motors and servos receive signals, or a PWM value, as instruction. PWM is pulse width modulation, meaning it will pulse a signal with a certain frequency to relay instruction. After sitting down with the VEX motors for 4 excruciating hours, I found that the PWM values it took were from between 6-22 by running a loop with PWM output from 1-100 and observing the behavior (direction, speeds). 
+
++ There's an ungodly amount of trial and error involved here, but the main takeaway was to simply test code to see if it worked. 
++ Motors and servos receive signals, or a PWM value, as instruction. PWM is pulse width modulation, meaning it will pulse a signal with a certain frequency to relay instruction. After sitting down with the VEX motors for 4 excruciating hours, I found that the PWM values it took were from between 6-22 by [running a loop with PWM output from 1-100](./motor_testing/basic.py) and [observing the behavior](./motor_testing/second_test.py) (direction, speeds). 
++ To reverse the direction of the motor without writing in another motor object reverse the polarity of the controller connectors
 </details>
 
 <details>
 <summary>The cannon barrel/chamber popping off during the combustion</summary>
-This just means that the AXE:oxygen ratio was perfect. Concluded that AXE can be used as butane.
-<br></br>
-Also figured out that using epoxy over duct tape might've been a better idea 
+
++ This just means that the AXE:oxygen ratio was perfect. Concluded that AXE can be used as butane.
++ Also figured out that using epoxy over duct tape might've been a better idea 
 </details>
 
 <details>
 <summary>Condensation/concentration of the AXE preventing sparking</summary>
-Chopstick + paper towel :D
-<br></br>
-On a more serious note, the environment/temperature of the room where you're firing plays a huge role. As Canadians we're at a clear disadvantage
-<br></br>
-As suggested, adding some sort of ventilation would work, probably a fan 
+
++ Chopstick + paper towel :D
++ On a more serious note, the environment/temperature of the room where you're firing plays a huge role. As Canadians we're at a clear disadvantage
++ As suggested, adding some sort of ventilation would work, probably a fan 
+</details>
+
+<details>
+<summary>PYNPUT</summary>
+
++ DO NOT NAME PYTHON SCRIPTS THE SAME NAMES AS PACKAGES
++ THIS TOOK ME 2 HOURS TO FIGURE OUT AND IT WAS ONLY THROUGH A REDDIT COMMENT
++ ![image](https://cdn.discordapp.com/attachments/854843316830470144/965371710331289620/unknown.png) 
++ IM SEETHING WITH PURE UNFILTERED RAGE
 </details>
 
 ## Tank Media
