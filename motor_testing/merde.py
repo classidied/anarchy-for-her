@@ -1,19 +1,18 @@
-# pynput testing
 from pynput.keyboard import Key, Listener
-
-def on_press(key):
-    print('{0} pressed'.format(
-        key))
-
-def on_release(key):
-    print('{0} release'.format(
-        key))
-    if key == Key.esc:
-        # Stop listener
+  
+def show(key):
+    
+    if key == Key.tab:
+        print("good")
+          
+    if key != Key.tab:
+        print("try again")
+          
+    # by pressing 'delete' button 
+    # you can terminate the loop 
+    if key == Key.delete: 
         return False
-
-# Collect events until released
-with Listener(
-        on_press=on_press,
-        on_release=on_release) as listener:
+  
+# Collect all event until released
+with Listener(on_press = show) as listener:
     listener.join()

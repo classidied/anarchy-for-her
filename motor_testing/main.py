@@ -29,9 +29,11 @@ using knowledge of ranges
 - counterclockwise from 15-22 (speed increasing)
 - 14 is neutral point
 
-
-
 algo 
 
+pin 15 / yellow wire is for the right motors
+pin 16 / white wire is for the left motors
 
 '''
+
+

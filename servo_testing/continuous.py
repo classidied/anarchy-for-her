@@ -7,10 +7,10 @@ import time
 GPIO.setmode(GPIO.BOARD)
 
 # Set pin 11 as an output, and set servo1 as pin 11 as PWM
-GPIO.setup(11,GPIO.OUT)
+GPIO.setup(11,GPIO.OUT) # left servo
 
 # Set pin 13 as an output, setting servo2 as pin 13 pwm
-GPIO.setup(13, GPIO.OUT)
+GPIO.setup(13, GPIO.OUT) # right servo
 
 # make servos
 servo1 = GPIO.PWM(11, 50) # Note 11 is pin, 50 = 50Hz pulse -> change pulse to change the power?
@@ -21,23 +21,17 @@ servo2.start(0)
 
 try:
     while True:
-        # first set the servo into place, at 0 degrees (duty cycle 2)
-        servo1.ChangeDutyCycle(2)
-        servo2.ChangeDutyCycle(2)
-        time.sleep(1)
-        # turn servo1 180 degrees, servo2 90 degrees
-        servo1.ChangeDutyCycle(12)
-        servo2.ChangeDutyCycle(7)
-        time.sleep(1)
-        print("hopefully turned 180 or 90")
-        servo1.ChangeDutyCycle(0)
-        servo2.ChangeDutyCycle(0)
-        # turn servo1 back to 0, servo2 to 180
+        seconds = int(input("Spin for how many seconds: "))
+        # first set the servo into place, at 0 degrees (right), 180 (left) (duty cycle 2)
         servo1.ChangeDutyCycle(2)
         servo2.ChangeDutyCycle(12)
-        print("went back to 0")
-        servo1.ChangeDutyCycle(0)
-        servo2.ChangeDutyCycle(0)
+        time.sleep(0.5)
+        # turn servo1 180 degrees, servo2 90 degrees
+        servo1.ChangeDutyCycle(12)
+        servo2.ChangeDutyCycle(2)
+        time.sleep(seconds) # 2 seconds will actually click the lighter
+        print("hopefully turned 180 or 90")
+       
 except KeyboardInterrupt:
     #Clean things up at the end
     servo1.stop()
@@ -52,6 +46,12 @@ Notes:
 and for some reason it'll work, the only issue is that the only way to stop it is to physically
 disconnect it from power (removing pins/powering off the pi completely)
 
+# turn servo1 back to 0, servo2 to 180
+        servo1.ChangeDutyCycle(2)
+        servo2.ChangeDutyCycle(2)
+        print("went back to 0")
+        servo1.ChangeDutyCycle(0)
+        servo2.ChangeDutyCycle(0)
 '''
 
 

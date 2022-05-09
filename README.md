@@ -26,7 +26,7 @@ Fueled by:
 - Fred's 3D printer
 - [Servos](https://www.amazon.ca/gp/product/B07VT5T9JC/ref=ox_sc_act_title_2?smid=A2FI4MJY3VQVX5&psc=1)
 - [Wires](https://www.amazon.ca/Premium-Breadboard-Jumper-100-Pack-Hellotronics/dp/B07ZHXPQWS?th=1)
-- [Solenoids](https://www.amazon.ca/gp/product/B07Y5TVG6Z/ref=ox_sc_act_title_1?smid=A2KRDQ1AI5Y5G6&psc=1)
+- [Solenoids](https://www.amazon.ca/gp/product/B07Y5TVG6Z/ref=ox_sc_act_title_1?smid=A2KRDQ1AI5Y5G6&psc=1) (not being used?)
 - Stepper Motor stuff
 
 
@@ -92,6 +92,13 @@ Here are a few issues that we ran into:
 + THIS TOOK ME 2 HOURS TO FIGURE OUT AND IT WAS ONLY THROUGH A REDDIT COMMENT
 + ![image](https://cdn.discordapp.com/attachments/854843316830470144/965371710331289620/unknown.png) 
 + IM SEETHING WITH PURE UNFILTERED RAGE
+</details>
+
+<details>
+<summary>Making tank do the wasd funny</summary>
+
++ So unfortunately, it's needlessly more complex to try using `pynput` or the python `keyboard` library to track the time used to hold down the keys because the Pi doesn't recognize your machine's keyboard as its own 
++ 
 </details>
 
 ## Tank Media

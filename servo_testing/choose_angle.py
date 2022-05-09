@@ -8,8 +8,8 @@ import time
 GPIO.setmode(GPIO.BOARD)
 
 # Set pin 11 as an output, and define as servo1 as PWM pin
-GPIO.setup(11,GPIO.OUT)
-servo1 = GPIO.PWM(11,50) # pin 11 for servo1, pulse 50Hz
+GPIO.setup(15,GPIO.OUT)
+servo1 = GPIO.PWM(15, 100) # pin 11 for servo1, pulse 50Hz
 
 # Start PWM running, with value of 0 (pulse off)
 servo1.start(0)
